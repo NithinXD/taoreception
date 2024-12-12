@@ -1,0 +1,40 @@
+name: taoreception
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  network_info_plus: ^4.1.0 # For network connectivity checks 
+  http: ^0.13.3 # For making HTTP requests to update print status
+  sqflite: ^2.3.0
+  path_provider: ^2.1.1
+  intl: ^0.18.1
+  collection: ^1.17.2
+  image: ^3.0.2 
+  android_intent_plus: ^5.2.0
+  month_picker_dialog: ^2.12.0
+  table_calendar: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3
+  flutter_launcher_icons: ^0.9.2
+
+flutter:
+  uses-material-design: true
+  assets:
+      - assets/sounds/beep.mp3
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"  # Path to your app icon image

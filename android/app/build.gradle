@@ -1,0 +1,55 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    compileSdkVersion 34
+    namespace "com.example.taoreception"
+    signingConfigs {
+        release {
+            keyAlias 'newalias'
+            keyPassword '1234567890'
+            storeFile file('new-keystore.jks')
+            storePassword '1234567890'
+        }
+    }
+
+    buildTypes {
+        release {
+            // No ProGuard file for release
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.example.taoreception"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    // other configurations...
+}
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+}
+
+
+flutter {
+    source = "../.."
+}
